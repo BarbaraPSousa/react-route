@@ -1,7 +1,9 @@
 import React from 'react'
 import './assets/css/base/base.css'
+
 import Home from './paginas/Home'
 import Sobre from './paginas/Sobre'
+import Pagina404 from './paginas/pagina404'
 
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom'
 
@@ -16,6 +18,9 @@ function App() {
           </Route>
           <Route path="/sobre">
             <Sobre />
+          </Route>
+          <Route>
+            <Pagina404/>
           </Route>
         </Switch>
       </Router>
