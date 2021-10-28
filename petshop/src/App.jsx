@@ -3,17 +3,20 @@ import './assets/css/base/base.css'
 import Home from './paginas/Home'
 import Sobre from './paginas/Sobre'
 
+import { BrowserRouter as Router, Route } from 'react-router-dom'
+
 function App() {
-  const Router = () => {
-    const location = window.location.pathname
-    if (location == '/sobre') {
-      return <Sobre />
-    } else {
-      return <Home />
-    }
-  }
   return (
-  <>{Router()}</>
+    <>
+      <Router>
+        <Route path='/'>
+          <Home />
+        </Route>
+        <Route path='/sobre'>
+          <Sobre />
+        </Route>
+      </Router>
+    </>
   )
 }
 
